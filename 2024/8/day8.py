@@ -26,6 +26,12 @@ def check_point(city: list, point: tuple) -> bool:
 def show_city(city: list):
     for line in city:
         print(line)
+    with open("output.txt", "w") as file:
+        for row in city:
+            for position in row:
+                file.write(position)
+            file.write("\n")
+
 
 def count_interence(city: list) -> int:
     count = 0
@@ -77,3 +83,56 @@ print(count_interence(city))
 
 # --- Part 2 ---
 
+def count_interence(city: list) -> int:
+    count = 0
+    for line in city:
+        for pos in line:
+            if pos != ".":
+                count += 1
+    return count
+
+city = []
+with open("input.txt", "r") as file:
+    for line in file:
+        city.append(list(line.rstrip()))
+
+frequencies = {}
+for frequency in list(string.ascii_letters):
+    frequencies[frequency] = []
+for frequency in list(string.digits):
+    frequencies[frequency] = []
+
+y = 0
+for line in city:
+    for frequency in frequencies:
+        for x, pos in enumerate(line):
+            if frequency == pos:
+                frequencies[frequency].append((x, y))
+    y += 1
+
+available_frequencies = []
+for frequency in frequencies:
+    if frequencies[frequency]:
+        available_frequencies.append(frequency)
+
+interference = []
+for frequency in available_frequencies:
+    for point1, point2 in itertools.combinations(frequencies[frequency], 2):
+        distance = sub_points(point1, point2)
+        while(True):
+            point1 = add_points(point1, distance)
+            if check_point(city, point1):
+                interference.append(point1)
+                continue
+            break
+        while(True):
+            point2 = sub_points(point2, distance)
+            if check_point(city, point2):
+                interference.append(point2)
+                continue
+            break
+
+for pos in interference:
+    city[pos[1]][pos[0]] = "#"
+
+print(count_interence(city))
