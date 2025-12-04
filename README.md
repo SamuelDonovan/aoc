@@ -4,7 +4,7 @@
 |:---:|:---:|:---:|:---:|:---:|
 | <nobr> [Day 1: Secret Entrance](https://adventofcode.com/2025/day/1) </nobr> | <nobr> [link](/2025/1/main.cpp) </nobr> | </nobr> [Link](/2025/1/input.txt) </nobr> | </nobr> [Link](/2025/1/input_example.txt) </nobr> | </nobr> ⭐</nobr> | 
 | <nobr> [Day 2: ](https://adventofcode.com/2025/day/2) </nobr> | <nobr> [link](/2025/2/main.cpp) </nobr> | </nobr> [Link](/2025/2/input.txt) </nobr> | </nobr> [Link](/2025/2/input_example.txt) </nobr> | </nobr> </nobr> | 
-| <nobr> [Day 3: ](https://adventofcode.com/2025/day/3) </nobr> | <nobr> [link](/2025/3/main.cpp) </nobr> | </nobr> [Link](/2025/3/input.txt) </nobr> | </nobr> [Link](/2025/3/input_example.txt) </nobr> | </nobr> </nobr> |
+| <nobr> [Day 3: Lobby](https://adventofcode.com/2025/day/3) </nobr> | <nobr> [link](/2025/3/main.cpp) </nobr> | </nobr> [Link](/2025/3/input.txt) </nobr> | </nobr> [Link](/2025/3/input_example.txt) </nobr> | </nobr> </nobr> | 
 | <nobr> [Day 4: ](https://adventofcode.com/2025/day/4) </nobr> | <nobr> [link](/2025/4/main.cpp) </nobr> | </nobr> [Link](/2025/4/input.txt) </nobr> | </nobr> [Link](/2025/4/input_example.txt) </nobr> | </nobr> </nobr> |
 | <nobr> [Day 5: ](https://adventofcode.com/2025/day/5) </nobr> | <nobr> [link](/2025/5/main.cpp) </nobr> | </nobr> [Link](/2025/5/input.txt) </nobr> | </nobr> [Link](/2025/5/input_example.txt) </nobr> | </nobr> </nobr> |
 | <nobr> [Day 6: ](https://adventofcode.com/2025/day/6) </nobr> | <nobr> [link](/2025/6/main.cpp) </nobr> | </nobr> [Link](/2025/6/input.txt) </nobr> | </nobr> [Link](/2025/6/input_example.txt) </nobr> | </nobr> </nobr> |
