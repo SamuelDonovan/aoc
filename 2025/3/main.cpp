@@ -22,11 +22,10 @@ auto read_file_lines(const std::string& filename) -> std::vector<std::string>
     return lines;
 }
 
-auto find_max(std::string& number, bool first, int skip = -1) -> int 
+auto find_max(std::string& number, int start, int end) -> int 
 {
-    int maxIndex = skip + 1;
-    size_t reserve = 1 ? first : 0;
-    for (int idx = skip + 1; static_cast<size_t>(idx) < number.size() - reserve; idx++) {
+    int maxIndex = start;
+    for (int idx = start; idx < end; idx++) {
         if (number[idx] > number[maxIndex])
             maxIndex = idx;
     }
@@ -35,8 +34,8 @@ auto find_max(std::string& number, bool first, int skip = -1) -> int
 
 auto find_max_in_line(std::string& number) -> int 
 {
-    auto firstIndex = find_max(number, true);
-    auto secondIndex = find_max(number, false, firstIndex);
+    auto firstIndex = find_max(number, 0, static_cast<int>(number.size()) - 1);
+    auto secondIndex = find_max(number, firstIndex + 1, static_cast<int>(number.size()));
     return ((number[firstIndex] - '0') * 10) + (number[secondIndex] - '0');
 }
 
